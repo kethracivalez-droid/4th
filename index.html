@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Monthsary 💕</title>
+
+  <!-- Soft romantic font -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(135deg, #ffe6f0, #ffd6e8);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Floating hearts for interactive background */
+    body::before, body::after {
+      content: "💕 💖 💗 💕 💓";
+      position: absolute;
+      font-size: 2rem;
+      animation: float 10s linear infinite;
+      opacity: 0.2;
+      white-space: pre;
+    }
+    body::after {
+      animation-duration: 15s;
+      left: 20%;
+      top: 10%;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh); }
+      100% { transform: translateY(-100vh); }
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 800px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(255, 182, 193, 0.4);
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #d63384;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #4d3d3d;
+      margin-bottom: 25px;
+    }
+
+    /* Envelope styles */
+    .envelope-wrapper {
+      position: relative;
+      width: 250px;
+      height: 150px;
+      margin: 0 auto 30px;
+      perspective: 1000px;
+    }
+
+    .envelope {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: #ffb6c1;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 1s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+
+    .flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: #ff80a8;
+      border-radius: 10px 10px 0 0;
+      transform-origin: top center;
+      transition: transform 1s ease;
+      z-index: 2;
+    }
+
+    .envelope.open .flap {
+      transform: rotateX(180deg);
+      z-index: 0;
+    }
+
+    .message-text {
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1em;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    #letter {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 1s ease, opacity 1s ease;
+      opacity: 0;
+      background: rgba(255, 240, 245, 0.95);
+      padding: 0 20px;
+      border-radius: 15px;
+      color: #4d3d3d;
+      text-align: left;
+      font-size: 1em;
+      white-space: pre-line;
+    }
+
+    #letter.show {
+      max-height: 1000px;
+      opacity: 1;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .yt-button {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #ff80b5;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      font-weight: bold;
+    }
+
+    .yt-button:hover {
+      background-color: #ff5a9e;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.6em; }
+      p { font-size: 1em; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Everyday with you is a gift </h1>
+    <p>To Janna, I love you <3</p>
+
+    <!-- Envelope -->
+    <div class="envelope-wrapper" onclick="toggleLetter()">
+      <div class="envelope" id="envelope">
+        <div class="flap"></div>
+        <div class="message-text">Read My Letter 💌</div>
+      </div>
+    </div>
+
+    <!-- Hidden Letter -->
+    <div id="letter">
+To the Best Girlfriend,  
+
+Four months. It feels both short and long at the same time. Short, because every moment with you passes so quickly. Long, because in those four months, I’ve already felt a lifetime’s worth of love, comfort, and happiness with you.  
+
+You’ve become my coffee in the morning, most of all, my bedtime story. When the world gets heavy and my mind is full of noise, it’s always you I think about before I close my eyes. Just hearing your voice or knowing that you’re there calms me and makes me feel safe enough to dream. Langga, thank you for being my rest.  
+
+Whenever I listen to “Hindi Ako Mawawala,” I can’t help but think of us. It reminds me of the love I want to give you. The kind of love that never leaves, never fades, and never gets tired. No matter what life brings, no matter what struggles we face, langga, dili gyud ko mawala. I will stand beside you, hold your hand through the storm, and love you even harder when things get tough. Because my love is not temporary, it is constant, always here, always choosing you.  
+
+You’ve seen me in my happiest moments, and you’ve seen me in my weakest ones. And still, you stayed. That’s why I want to promise you, again and again, that I will stay too. Just like the song says, “kahit anong mangyari,” biskan unsa pa na, my love for you will remain. I’m not going anywhere. Imo rako.  
+
+Happy 4th Monthsary, My love. Thank you for being my safe place, my laughter, my bedtime story. I’m grateful for everything, every late-night chat, every moment we spent together, and to things that only we can understand. I’m grateful for you, just you, exactly the way you are.  
+
+Here’s to more months, more years, more lifetimes. Here’s to us, to our forever, to our “fourever.” I love you with all that I am, and I’ll never get tired of reminding you: hindi ako mawawala. Four months, to fourever, with you.
+
+Love, Maldita
+      <br><br>
+      <a class="yt-button" href="https://youtu.be/3zp0BPaqsS8?si=gUJM5E3oM2P-wTSa" target="_blank">🎵 Play Our Song</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleLetter() {
+      const envelope = document.getElementById('envelope');
+      const letter = document.getElementById('letter');
+      envelope.classList.toggle('open');
+      letter.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
